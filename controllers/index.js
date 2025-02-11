@@ -19,4 +19,10 @@ const getStockByTicker = (tickerName) => {
     console.log("Result is",res)
     return res
 }
-module.exports = {getAllStocks,getStockByTicker}
+const makeTrade = (newTrade) => {
+    const newTradeRes = {tradeId: trades.length + 1, ...newTrade}
+    console.log("New trade is",newTradeRes)
+    trades.push(newTradeRes)
+    return newTradeRes
+}
+module.exports = {getAllStocks,getStockByTicker,makeTrade}
