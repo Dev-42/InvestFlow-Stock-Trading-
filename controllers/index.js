@@ -13,4 +13,10 @@ let stocks = [
 const getAllStocks = () => {
     return stocks
 }  
-module.exports = {getAllStocks}
+const getStockByTicker = (tickerName) => {
+    console.log("tickerName",tickerName)
+    const res =  stocks.filter((stock) => stock.ticker === tickerName)
+    console.log("Result is",res)
+    return res
+}
+module.exports = {getAllStocks,getStockByTicker}
